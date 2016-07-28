@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+ <title>Validaciones HTML5</title>
+ <body>
+ <form id="formulario" method="post">
+  <fieldset>
+   <legend>Formulario de contacto</legend>
+   <label>Nombre: *</label>
+   <input type="nom" name="nom" required title="Debe ingresar un nombre" /><br/>
+
+   <label>Apellido: *</label>
+   <input type="text" name="emp" required title="Debe ingresar un apellido"/><br/>
+
+   <label>Tel&eacute;fono: </label>
+   <input type="text" name="tel" id="tel" required pattern="\d{3}-\d{4}-\d{4}" title="Formato XXX-XXXX-XXXX"/><br/>
+
+   <label>Sexo: </label>
+   <input type="radio" name="sexo" value="Femenino" checked />
+   <input type="radio" name="sexo" value="Masculino"/><br/>
+   
+   <label>Edad: </label>
+   <input type="number" size="6" name="age" min="18" max="99" value="21" required><br/>
+   
+   <label>Fecha de nacimiento: </label>
+   <input type="text" name="date" required pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$" title="Formato dd/mm/yyyy"/><br/>
+
+   <label>Foto de perfil: </label>
+   <input type="file" name="pic" accept="image/*"  required/><br/>
+
+   <label>Pa&iacute;s *</label>
+   <input list="pais" required title="Debe ingresar un pa&iacute;s"/>
+   <datalist id="pais">
+    <option value="Belice">
+    <option value="Guatemala">
+    <option value="Honduras">
+    <option value="El Salvador">
+    <option value="Nicaragua">
+    <option value="Costa Rica">
+    <option value="Panam&aacute;">
+   </datalist><br/>
+
+   <label>Correo electr&oacute;nico: *</label>
+   <input type="text" name="email1" required title="Debe ingresar correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"/><br/>
+
+   <label>Ingrese correo de nuevo: *</label>
+   <input type="text" name="email2" required title="Debe re-ingresar correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"/><br/>
+
+   <label>Contrase&ntilde;a: *</label>
+   <input type="password" name="pswd" required title="Debe ingresar una clave"/><br/>
+
+   <input type="submit" value="Registrar">
+  </fieldset>  
+ </form>
+ </body>
+</html>
